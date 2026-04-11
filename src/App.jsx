@@ -1,15 +1,24 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Header from './Components/Header'
 import { Outlet } from 'react-router-dom'
+import Welcome from './Components/Welcome'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [visibility, setVisibility] = useState(true)
+  useEffect(() => {
+    setTimeout(() => {
+      setVisibility(false)
+    }, 3000)
+  }, [])
   return (
     <>
-      <Header />
-      <Outlet />
+      {visibility ? <Welcome /> :
+        <>
+          <Header />
+          <Outlet />
+        </>
+      }
     </>
   )
 }
