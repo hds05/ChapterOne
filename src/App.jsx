@@ -7,9 +7,11 @@ import Welcome from './Components/Welcome'
 function App() {
   const [visibility, setVisibility] = useState(true)
   useEffect(() => {
-    setTimeout(() => {
+    const welcome = setTimeout(() => {
       setVisibility(false)
-    }, 3000)
+    }, 3900)
+
+    return ()=> clearTimeout(welcome)
   }, [])
   return (
     <>

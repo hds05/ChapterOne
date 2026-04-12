@@ -22,9 +22,9 @@ function HomePage() {
     if (error) return <h2>{`there is an error of: ${error}`}</h2>
 
     return (
-        <div className='mt-4'>
+        <div className='pt-4'>
             {/* welcome part */}
-
+            <h1 className='text-center text-lg m-1 md:m-8 md:text-2xl font-bold font-mono'>Welcome in the World of Books...</h1>
             {/* cards for popular books */}
             {
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-4 md:p-4 ' >

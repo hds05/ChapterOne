@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 function Header(){
     return (
-        <header className="flex items-center justify-between p-4 shadow-[0px_2px_5px_gray]">
-            <div className="m-2">
-                <h1 className="text-2xl">ChapterOne <sub className="text-sm">A online library</sub></h1>
+        <header className="flex flex-col md:flex-row items-center justify-between px-2 lg:p-4 shadow-[0px_2px_5px_gray] font-mono">
+            <div className="flex flex-col md:flex-row items-center  gap-2 my-4">
+                <h1 className="font-bold text-2xl  md:text-4xl">ChapterOne </h1><sub className="text-[15px]">A online library.</sub>
             </div>
-            <nav className="flex gap-4">
-                <Link to={'/'}>Home</Link>
-                <Link to={'/browsebooks'}>Browse Books</Link>
-                <Link to={'/addbook'}>Add Books</Link>
+            <nav className="flex gap-4 text-sm p-4 md:text-xl">
+                <Link to={'/'} className="active:text-gray-500">Home</Link>
+                <Link to={'/browsebooks'}>Browse_Books</Link>
+                <Link to={'/addbook'}>Add_Books</Link>
             </nav>
         </header>
     )
