@@ -16,10 +16,10 @@ function BrowseBooks() {
     if (loading) return <h1>loading.........</h1>
     if (error) return <h1>{error}</h1>
 
-    const filteredBooks = allBooks.filter((e) =>
+    const filteredBooks = allBooks.filter((e) => 
         e.title.toLowerCase().includes(searchedText.toLowerCase()) ||
         e.description.toLowerCase().includes(searchedText.toLowerCase()) ||
-        e.author.toLowerCase().includes(searchedText.toLowerCase())
+            e.author.toLowerCase().includes(searchedText.toLowerCase())
     )
     console.log(filteredBooks, 'filtered booooks');
 

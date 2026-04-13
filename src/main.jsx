@@ -6,27 +6,38 @@ import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router
 import Addbooks from './Components/Addbooks.jsx'
 import BrowseBooks from './Components/BrowseBooks.jsx'
 import HomePage from './Components/HomePage.jsx'
+import BookDetailPage from './Components/BookDetailPage.jsx'
 
 const appRouter = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <h1>It is error page....in app.jsx</h1>,
+    errorElement: <h1>there is an error....in app.jsx</h1>,
     children: [
       {
         path: '/',
         element: <HomePage />,
-        errorElement: <h1>It is error page....in HomePage.jsx</h1>
+        errorElement: <h1>there is an error....in HomePage.jsx</h1>
       },
       {
         path: '/addbook',
         element: <Addbooks />,
-        errorElement: <h1>It is error page....in add books</h1>
+        errorElement: <h1>there is an error....in add books</h1>
       },
       {
-        path: '/browsebooks',
+        path: '/books',
         element: <BrowseBooks />,
-        errorElement: <h1>It is error page....in Browse books</h1>
+        errorElement: <h1>there is an error....in Browse books</h1>
+      },
+      {
+        path: '/books/:category',
+        element: <BrowseBooks />,
+        errorElement: <h1>It is error.... about books category</h1>
+      },
+      {
+        path: '/book/:id',
+        element: <BookDetailPage />,
+        errorElement: <h1>It is error.... about books's id</h1>
       },
 
     ]

@@ -9,7 +9,7 @@ function Header(){
             </div>
             <nav className="flex gap-4 text-sm p-4 md:text-xl">
                 <Link to={'/'} className="active:text-gray-500">Home</Link>
-                <Link to={'/browsebooks'}>Browse_Books</Link>
+                <Link to={'/books'}>Browse_Books</Link>
                 <Link to={'/addbook'}>Add_Books</Link>
             </nav>
         </header>
