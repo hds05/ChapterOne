@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useFetchData } from '../utils/usefetchData'
 import AllBooksCard from './AllBooksCard'
+import Loading from './Loading'
 
 function BrowseBooks() {
     const [allBooks, setAllBooks] = useState([])
@@ -13,7 +14,7 @@ function BrowseBooks() {
             setAllBooks(data.Books || [])
         }
     }, [data])
-    if (loading) return <h1>loading.........</h1>
+    if (loading) return <Loading />
     if (error) return <h1>{error}</h1>
 
     const filteredBooks = allBooks.filter((e) => 

@@ -7,12 +7,13 @@ import Addbooks from './Components/Addbooks.jsx'
 import BrowseBooks from './Components/BrowseBooks.jsx'
 import HomePage from './Components/HomePage.jsx'
 import BookDetailPage from './Components/BookDetailPage.jsx'
+import Error404 from './Components/Error404.jsx'
 
 const appRouter = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <h1>there is an error....in app.jsx</h1>,
+    errorElement: <Error404 />,
     children: [
       {
         path: '/',
