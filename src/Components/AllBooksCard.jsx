@@ -5,7 +5,7 @@ function AllBooksCard({ Books }) {
 
     return (
 
-        <div className="shadow-[0px_1px_1px_gray] md:shadow-[0px_2px_5px_black] md:rounded-4xl p-4 h-[500px] flex flex-col justify-between text-center">
+        <div className="shadow-[0px_0px_1px_gray] md:shadow-[0px_0px_5px_gray] md:rounded-4xl p-4 overflow-hidden h-[500px] flex flex-col justify-between text-center">
             <div className="flex justify-center items-center h-[70%] overflow-hidden">
                 <img src={Books.coverImage} className="w-[200px] md:w-fit md:h-full" alt="" />
             </div>
