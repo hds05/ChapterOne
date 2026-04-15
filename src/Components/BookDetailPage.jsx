@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useFetchData } from "../utils/usefetchData";
 import { Link, useParams } from "react-router-dom";
 import Loading from "./Loading";
+import { useSelector } from "react-redux";
 
 
 function BookDetailPage() {
@@ -10,14 +11,18 @@ function BookDetailPage() {
     const { id } = useParams();
     console.log(data);
     console.log(id);
+
+    const addedBook = useSelector((state)=> state.Books.value)
+
     useEffect(() => {
         if (data?.Books) {
             console.log(data);
-            const foundBook = data.Books.find((e) => e._id === id)
+            const allBooks = [...addedBook, ...data.Books]
+            const foundBook = allBooks.find((e) => e._id === id)
             console.log(foundBook);
             setDetailCard(foundBook)
         }
-    }, [data, id])
+    }, [data, id, addedBook])
     if (loading) return <Loading />
     if (error) return <h1>eeroooorrrrrrrrrrrrr..........</h1>
     return (

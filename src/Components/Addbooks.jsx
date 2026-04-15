@@ -34,6 +34,11 @@ function Addbooks() {
     setCoverImage('')
 
     navigate('/books')
+    
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
   }
   return (
     <div className="min-h-screen flex items-center justify-center px-4 bg-[url('https://images.unsplash.com/photo-1722182877533-7378b60bf1e8?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGlicmFyeSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D')] bg-cover">
@@ -110,7 +115,7 @@ function Addbooks() {
                 value={category}
                 onChange={(e)=> setCategory(e.target.value)}
                 className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                placeholder="Link for Cover Image"
+                placeholder="Category"
                 />
             </div>
 
