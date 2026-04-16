@@ -3,6 +3,7 @@
 function Welcome() {
     return (
         <>
+            {/* main container for welcome  */}
             <div className="fixed inset-0  flex justify-center items-center flex-col p-4">
                 <div className=" bg-[url('https://png.pngtree.com/thumb_back/fh260/background/20241017/pngtree-lofi-empty-interior-with-desk-window-star-starry-forest-jungle-anime-image_16359934.jpg')] bg-contain flex flex-col lg:flex-row items-center justify-center p-5 rounded-4xl">
                     <img src="/giphy.gif" className="w-[200px] md:w-fit rounded-4xl" alt="" />

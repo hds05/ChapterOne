@@ -11,33 +11,41 @@ import Error404 from './Components/Error404.jsx'
 import { Provider } from 'react-redux'
 import { store } from './utils/store.js'
 
+// all routes of the application
 const appRouter = createBrowserRouter([
   {
+    // parent route
     path: '/',
     element: <App />,
+    // global error page shown if any route fails
     errorElement: <Error404 />,
     children: [
       {
+        // home page route
         path: '/',
         element: <HomePage />,
         errorElement: <h1 className='h-screen font-[Nunito] font-bold  flex justify-center items-center text-sm md:text-2xl text-center m-2'>Oooppsss!!! we are having some error..😬</h1>
       },
       {
+        // route to add books
         path: '/addbook',
         element: <Addbooks />,
         errorElement: <h1 className='h-screen font-[Nunito] font-bold  flex justify-center items-center text-sm md:text-2xl text-center m-2'>Oooppsss!!! We don't have Books of this category..😬</h1>
       },
       {
+        // route to display all books
         path: '/books',
         element: <BrowseBooks />,
         errorElement: <h1 className='h-screen font-[Nunito] font-bold  flex justify-center items-center text-sm md:text-2xl text-center m-2'>Oooppsss!!! We are having some error here..😬</h1>
       },
       {
+        // route to display books of a specific category
         path: '/books/:Category',
         element: <BrowseBooks />,
         errorElement: <h1 className='h-screen font-[Nunito] font-bold  flex justify-center items-center text-sm md:text-2xl text-center m-2'>Oooppsss!!! We don't have Books of this category..😬</h1>
       },
       {
+        // route to display detail page of a specific book
         path: '/book/:id',
         element: <BookDetailPage />,
         errorElement: <h1 className='h-screen font-[Nunito] font-bold  flex justify-center items-center text-sm md:text-2xl text-center m-2'>Oooppsss!!! There is no Book with this ID..😬</h1>
@@ -48,6 +56,7 @@ const appRouter = createBrowserRouter([
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    {/* make Redux store accible to the whole application */}
     <Provider store={store}>
 
       <RouterProvider router={appRouter} />
