@@ -59,7 +59,7 @@ function Addbooks() {
 
       {/* Main container for form card */}
       <div className="w-full max-w-4xl bg-white shadow-2xl rounded-2xl mt-6 m-4 flex flex-col md:flex-row overflow-hidden">
-        <div className="w-full md:w-1/2 bg-green-600 text-white flex flex-col justify-center items-center p-8">
+        <div className="w-full md:w-1/2 bg-linear-to-tr from-green-950 via-red-900 to-blue-900 text-white flex flex-col justify-center items-center p-8">
           <h1 className="text-3xl font-bold mb-4">Add a New Book 📚</h1>
           <p className="text-center text-sm opacity-90">
             Fill in the details and grow your personal library collection.

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
         // main header container
-        <header className="bg-white flex flex-col md:flex-row items-center justify-between px-2 lg:p-4 shadow-[0px_2px_5px_gray] font-mono">
+        <header className="bg-white flex flex-col md:flex-row items-center justify-between px-2 lg:p-4 shadow-[0px_2px_15px_gray] font-mono">
             {/* web logo and title with tagline */}
             <div className="flex"> 
                 <img src="/favicon.png" className="w-[100px]" alt="" />
